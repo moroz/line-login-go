@@ -16,3 +16,5 @@ func MustGetenv(name string) string {
 
 var LineClientId = MustGetenv("LINE_CLIENT_ID")
 var LineClientSecret = MustGetenv("LINE_CLIENT_SECRET")
+
+const LineCallbackUri = "http://localhost:3000/oauth/line/callback"

@@ -20,6 +20,7 @@ func Router() http.Handler {
 
 	oauth2 := OAuth2Controller(config.LineClientId, config.LineClientSecret)
 	r.Get("/oauth/line/redirect", oauth2.Init)
+	r.Get("/oauth/line/callback", oauth2.Callback)
 
 	return r
 }
